@@ -10,5 +10,7 @@ public class Main {
 
         HelloWorld helloWorld = context.getBean(HelloWorld.class);
         helloWorld.hello();
+        
+        ((GenericXmlApplicationContext) context).close();
     }
 }
