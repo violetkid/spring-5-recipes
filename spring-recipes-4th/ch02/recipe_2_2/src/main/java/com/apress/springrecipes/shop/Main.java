@@ -14,6 +14,7 @@ public class Main {
 
         Product aaa = context.getBean("aaa", Product.class);
         Product cdrw = context.getBean("cdrw", Product.class);
+
         System.out.println(aaa);
         System.out.println(cdrw);
     }

@@ -9,7 +9,6 @@ public class Main {
         ApplicationContext context =
                 new GenericXmlApplicationContext("appContext.xml");
 
-
         Product aaa = (Product) context.getBean("aaa");
         Product cdrw = (Product) context.getBean("cdrw");
         Product dvdrw = (Product) context.getBean("dvdrw");
