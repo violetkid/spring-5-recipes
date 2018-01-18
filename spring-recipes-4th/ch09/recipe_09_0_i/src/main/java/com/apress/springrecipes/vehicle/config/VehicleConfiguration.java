@@ -26,6 +26,5 @@ public class VehicleConfiguration {
         dataSource.setUsername("postgres");
         dataSource.setPassword("password");
         return dataSource;
-
     }
 }

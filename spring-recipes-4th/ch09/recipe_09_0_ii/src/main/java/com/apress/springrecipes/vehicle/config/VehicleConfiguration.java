@@ -19,7 +19,6 @@ public class VehicleConfiguration {
 
     @Bean
     public DataSource dataSource() {
-
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setUsername("postgres");
         dataSource.setPassword("password");

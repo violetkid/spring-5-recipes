@@ -16,8 +16,8 @@ public class Main {
         VehicleDao vehicleDao = context.getBean(VehicleDao.class);
         int count = vehicleDao.countAll();
         System.out.println("Vehicle Count: " + count);
-        String color = vehicleDao.getColor("TEM0001");
-        System.out.println("Color for [TEM0001]: " + color);
+        String color = vehicleDao.getColor("TEM0023");
+        System.out.println("Color for [TEM0023]: " + color);
 
     }
 

@@ -1,7 +1,6 @@
 package com.apress.springrecipes.vehicle;
 
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
@@ -44,12 +43,6 @@ public class NamedJdbcVehicleDao extends NamedParameterJdbcDaoSupport implements
             vehicle.setSeat((Integer) row.get("SEAT"));
             return vehicle;
         }).collect(Collectors.toList());
-    }
-
-    private Vehicle toVehicle(ResultSet rs) throws SQLException {
-        return new Vehicle(rs.getString("VEHICLE_NO"),
-                rs.getString("COLOR"), rs.getInt("WHEEL"),
-                rs.getInt("SEAT"));
     }
 
     private void prepareStatement(PreparedStatement ps, Vehicle vehicle) throws SQLException {
