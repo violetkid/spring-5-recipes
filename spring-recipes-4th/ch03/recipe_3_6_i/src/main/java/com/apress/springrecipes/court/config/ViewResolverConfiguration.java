@@ -19,7 +19,7 @@ public class ViewResolverConfiguration {
     public XmlViewResolver viewResolver() {
 
         XmlViewResolver viewResolver = new XmlViewResolver();
-        viewResolver.setLocation(resourceLoader.getResource("/WEB-INF/court-views.nl"));
+        viewResolver.setLocation(resourceLoader.getResource("/WEB-INF/court-views.xml"));
         return viewResolver;
     }
 }
