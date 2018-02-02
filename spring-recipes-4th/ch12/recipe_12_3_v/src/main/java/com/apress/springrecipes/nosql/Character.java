@@ -5,14 +5,14 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
 
 @NodeEntity
 public class Character {
 
-    @GraphId
+    @Id
     private Long id;
     private String name;
 

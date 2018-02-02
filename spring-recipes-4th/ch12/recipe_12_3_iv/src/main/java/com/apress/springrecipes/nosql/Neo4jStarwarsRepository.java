@@ -23,7 +23,6 @@ public class Neo4jStarwarsRepository implements StarwarsRepository {
 
 
     @Override
-    @SuppressWarnings("try")
     public Planet save(Planet planet) {
 
         Session session = sessionFactory.openSession();
@@ -34,7 +33,6 @@ public class Neo4jStarwarsRepository implements StarwarsRepository {
     }
 
     @Override
-    @SuppressWarnings("try")
     public Character save(Character character) {
 
         Session session = sessionFactory.openSession();

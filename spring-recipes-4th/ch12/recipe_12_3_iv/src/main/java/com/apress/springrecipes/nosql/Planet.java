@@ -1,12 +1,12 @@
 package com.apress.springrecipes.nosql;
 
-import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
 
 @NodeEntity
 public class Planet {
 
-    @GraphId
+    @Id
     private Long id;
     private String name;
 

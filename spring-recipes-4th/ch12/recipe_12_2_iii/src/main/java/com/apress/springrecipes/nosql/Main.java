@@ -17,5 +17,7 @@ public class Main {
         byte[] vehicleArray = jedis.get(vehicleNo.getBytes());
 
         System.out.println("Vehicle: " + SerializationUtils.deserialize(vehicleArray));
+
+        jedis.close();
     }
 }

@@ -8,5 +8,6 @@ public class Main {
         Jedis jedis = new Jedis("localhost");
         jedis.set("msg", "Hello World, from Redis!");
         System.out.println(jedis.get("msg"));
+        jedis.close();
     }
 }

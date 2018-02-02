@@ -17,5 +17,7 @@ public class Main {
         String vehicleString = jedis.get(vehicleNo);
 
         System.out.println("Vehicle: " + mapper.readValue(vehicleString, Vehicle.class));
+
+        jedis.close();
     }
 }
