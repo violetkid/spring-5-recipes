@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class CheckoutListener implements ApplicationListener<CheckoutEvent> {
 
     public void onApplicationEvent(CheckoutEvent event) {
-        // Do anything you like with the checkout time
+        // 체크아웃 시 수행할 로직을 여기에 구현합니다.
         System.out.println("Checkout event [" + event.getTime() + "]");
     }
 }

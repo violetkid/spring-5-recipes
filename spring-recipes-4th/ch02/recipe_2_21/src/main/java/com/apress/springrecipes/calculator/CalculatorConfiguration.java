@@ -8,9 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Created by marten on 24-01-17.
- */
 @Configuration
 @ComponentScan
 public class CalculatorConfiguration {
@@ -24,6 +21,7 @@ public class CalculatorConfiguration {
 
         ComplexCachingAspect complexCachingAspect = Aspects.aspectOf(ComplexCachingAspect.class);
         complexCachingAspect.setCache(cache);
+
         return complexCachingAspect;
     }
 }

@@ -28,7 +28,5 @@ public class Main {
 
         MinCalculator minCalculator = (MinCalculator) arithmeticCalculator;
         minCalculator.min(1, 2);
-
-
     }
 }

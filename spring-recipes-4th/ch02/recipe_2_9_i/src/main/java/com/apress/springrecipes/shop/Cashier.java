@@ -7,9 +7,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Date;
 
-
 public class Cashier {
-
 
     private String fileName;
     private String path;
@@ -22,7 +20,6 @@ public class Cashier {
     public void setPath(String path) {
         this.path = path;
     }
-
 
     public void openFile() throws IOException {
         File targetDir = new File(path);
@@ -45,6 +42,4 @@ public class Cashier {
     public void closeFile() throws IOException {
         writer.close();
     }
-
-
 }

@@ -16,7 +16,6 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(ShopConfiguration.class);
 
-
         Product aaa = context.getBean("aaa", Product.class);
         Product cdrw = context.getBean("cdrw", Product.class);
         Product dvdrw = context.getBean("dvdrw", Product.class);
@@ -30,11 +29,9 @@ public class Main {
         cart2.addItem(dvdrw);
         System.out.println("Shopping cart 2 contains " + cart2.getItems());
 
-
         Resource resource = new ClassPathResource("discounts.properties");
         Properties props = PropertiesLoaderUtils.loadProperties(resource);
         System.out.println("And don't forget our discounts!");
         System.out.println(props);
-
     }
 }

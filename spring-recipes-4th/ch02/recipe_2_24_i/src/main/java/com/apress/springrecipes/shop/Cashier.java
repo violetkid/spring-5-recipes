@@ -20,6 +20,4 @@ public class Cashier implements ApplicationEventPublisherAware {
         CheckoutEvent event = new CheckoutEvent(cart, new Date());
         applicationEventPublisher.publishEvent(event);
     }
-        
-
 }

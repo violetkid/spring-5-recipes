@@ -25,7 +25,5 @@ public class Main {
         Cashier cashier = (Cashier) context.getBean("cashier");
         cashier.checkout(cart1);
         cashier.checkout(cart2);
-
-
     }
 }

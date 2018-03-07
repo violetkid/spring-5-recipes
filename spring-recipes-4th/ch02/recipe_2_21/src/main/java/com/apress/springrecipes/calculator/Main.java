@@ -15,7 +15,5 @@ public class Main {
 
         complexCalculator.add(new Complex(1, 2), new Complex(2, 3));
         complexCalculator.sub(new Complex(5, 8), new Complex(2, 3));
-
-
     }
 }

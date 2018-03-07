@@ -12,12 +12,12 @@ public class Disc extends Product {
         super(name, price);
     }
 
-    // Getters and Setters
-    public void setCapacity(int capacity) { 
-	this.capacity = capacity;
-    } 
-     
-    public int getCapacity() { 
-	return capacity;
+    // 게터 및 세터
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public int getCapacity() {
+        return capacity;
     }
 }

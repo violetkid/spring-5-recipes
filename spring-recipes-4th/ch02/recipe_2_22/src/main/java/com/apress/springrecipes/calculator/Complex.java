@@ -40,9 +40,7 @@ public class Complex {
         this.formatter = formatter;
     }
 
-
     public String toString() {
         return formatter.format(this);
     }
 }
-

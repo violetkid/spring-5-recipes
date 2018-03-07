@@ -43,6 +43,4 @@ public class Cashier {
     public void closeFile() throws IOException {
         writer.close();
     }
-
-
 }

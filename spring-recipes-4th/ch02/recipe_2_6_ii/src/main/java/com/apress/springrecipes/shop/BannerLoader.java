@@ -19,9 +19,7 @@ public class BannerLoader {
 
     @PostConstruct
     public void showBanner() throws IOException {
-
         Files.lines(Paths.get(banner.getURI()), Charset.forName("UTF-8"))
-                .forEachOrdered(System.out::println);
-
+             .forEachOrdered(System.out::println);
     }
 }

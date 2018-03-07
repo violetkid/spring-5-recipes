@@ -22,7 +22,6 @@ public class CalculatorValidationAspect {
         }
     }
 
-
     private void validate(double a) {
         if (a < 0) {
             throw new IllegalArgumentException("Positive numbers only");

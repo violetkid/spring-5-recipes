@@ -34,6 +34,5 @@ public class Main {
 
         Counter unitCounter = (Counter) unitCalculator;
         System.out.println(unitCounter.getCount());
-
     }
 }

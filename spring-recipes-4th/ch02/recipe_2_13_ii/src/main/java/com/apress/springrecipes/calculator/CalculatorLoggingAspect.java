@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class CalculatorLoggingAspect {
+	
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Before("execution(* *.*(..))")
@@ -26,4 +27,3 @@ public class CalculatorLoggingAspect {
     }
 
 }
-

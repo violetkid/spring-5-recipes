@@ -17,7 +17,9 @@ public class CalculatorLoggingAspect {
 
     @Around("execution(* *.*(..))")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
+
         log.info("The method {}() begins with {}", joinPoint.getSignature().getName(), Arrays.toString(joinPoint.getArgs()));
+
         try {
             Object result = joinPoint.proceed();
             log.info("The method {}() ends with ", joinPoint.getSignature().getName(), result);

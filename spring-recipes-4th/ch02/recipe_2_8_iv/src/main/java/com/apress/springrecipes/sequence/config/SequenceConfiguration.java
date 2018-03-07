@@ -9,6 +9,7 @@ import com.apress.springrecipes.sequence.SequenceGenerator;
 
 @Configuration
 public class SequenceConfiguration {
+
     @Bean
     @DependsOn("datePrefixGenerator")
     public SequenceGenerator sequenceGenerator() {

@@ -11,6 +11,7 @@ import com.apress.springrecipes.shop.Product;
 @Configuration
 @Profile({"summer", "winter"})
 public class ShopConfigurationSumWin {
+
     @Bean
     public Product aaa() {
         Battery p1 = new Battery();
@@ -33,5 +34,4 @@ public class ShopConfigurationSumWin {
         p2.setCapacity(700);
         return p2;
     }
-
 }

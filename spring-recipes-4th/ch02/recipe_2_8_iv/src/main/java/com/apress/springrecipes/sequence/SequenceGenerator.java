@@ -3,8 +3,10 @@ package com.apress.springrecipes.sequence;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class SequenceGenerator {
+
     @Autowired
     private PrefixGenerator prefixGenerator;
+
     private String suffix;
     private int initial;
     private int counter;

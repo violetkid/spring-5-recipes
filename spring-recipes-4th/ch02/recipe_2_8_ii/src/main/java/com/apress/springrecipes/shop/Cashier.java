@@ -18,8 +18,10 @@ public class Cashier {
 
     @Value("checkout")
     private String fileName;
+
     @Value("c:/Windows/Temp/cashier")
     private String path;
+
     private BufferedWriter writer;
 
     public void setFileName(String fileName) {
@@ -53,6 +55,5 @@ public class Cashier {
     public void closeFile() throws IOException {
         writer.close();
     }
-
 
 }

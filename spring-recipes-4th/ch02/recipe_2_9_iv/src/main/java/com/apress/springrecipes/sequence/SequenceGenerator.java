@@ -1,6 +1,7 @@
 package com.apress.springrecipes.sequence;
 
 public class SequenceGenerator {
+
     private PrefixGenerator prefixGenerator;
     private String suffix;
     private int initial;

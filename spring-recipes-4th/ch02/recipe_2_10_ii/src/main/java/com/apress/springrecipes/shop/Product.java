@@ -1,7 +1,5 @@
 package com.apress.springrecipes.shop;
 
-import java.text.DecimalFormat;
-
 public abstract class Product {
 
     private String name;
@@ -19,7 +17,7 @@ public abstract class Product {
         return name;
     }
 
-    // Getters and Setters
+    // 게터 및 세터
     public void setName(String name) {
         this.name = name;
     }
@@ -33,7 +31,6 @@ public abstract class Product {
     }
 
     public String toString() {
-        DecimalFormat df = new DecimalFormat("#%");
         return name + " " + price;
     }
 }

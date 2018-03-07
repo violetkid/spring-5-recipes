@@ -7,7 +7,6 @@
     </weaver>
 
     <aspects>
-        <aspect
-                name="com.apress.springrecipes.calculator.ComplexCachingAspect"/>
+        <aspect name="com.apress.springrecipes.calculator.ComplexCachingAspect"/>
     </aspects>
 </aspectj>

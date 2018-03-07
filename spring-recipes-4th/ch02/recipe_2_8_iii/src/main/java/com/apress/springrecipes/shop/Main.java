@@ -6,9 +6,9 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class Main {
 
     public static void main(String[] args) throws Exception {
+
         ApplicationContext context =
                 new GenericXmlApplicationContext("appContext.xml");
-
 
         Product aaa = (Product) context.getBean("aaa");
         Product cdrw = (Product) context.getBean("cdrw");
@@ -26,7 +26,5 @@ public class Main {
         Cashier cashier = (Cashier) context.getBean("cashier");
         cashier.checkout(cart1);
         cashier.checkout(cart2);
-
-
     }
 }

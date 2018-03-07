@@ -19,8 +19,7 @@ public class CalculatorLoggingAspect {
 
     @Before("execution(* *.*(..))")
     public void logBefore(JoinPoint joinPoint) {
-        log.info("The method {}() begins with {}", joinPoint.getSignature().getName() ,Arrays.toString(joinPoint.getArgs()));
+        log.info("The method {}() begins with {}", joinPoint.getSignature().getName(), Arrays.toString(joinPoint.getArgs()));
     }
 
 }
-

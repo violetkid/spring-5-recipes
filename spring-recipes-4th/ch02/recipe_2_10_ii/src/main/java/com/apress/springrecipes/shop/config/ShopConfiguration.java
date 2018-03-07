@@ -18,7 +18,6 @@ public class ShopConfiguration {
 
     @Bean
     public ProductCreator productCreatorFactory() {
-
         ProductCreator factory = new ProductCreator();
         Map<String, Product> products = new HashMap<>();
         products.put("aaa", new Battery("AAA", 2.5));
@@ -42,5 +41,4 @@ public class ShopConfiguration {
     public Product dvdrw() {
         return productCreatorFactory().createProduct("dvdrw");
     }
-
 }

@@ -12,11 +12,11 @@ public class Battery extends Product {
         super(name, price);
     }
 
+    // 게터 및 세터
     public boolean getRechargeable() {
         return rechargeable;
     }
 
-    // Getters and Setters
     public void setRechargeable(boolean rechargeable) {
         this.rechargeable = rechargeable;
     }

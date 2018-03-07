@@ -10,6 +10,7 @@ import com.apress.springrecipes.shop.ProductCreator;
 @Configuration
 @ComponentScan("com.apress.springrecipes.shop")
 public class ShopConfiguration {
+
     @Bean
     public Product aaa() {
         return ProductCreator.createProduct("aaa");

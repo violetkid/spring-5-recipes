@@ -23,7 +23,6 @@ public class ShopConfiguration {
         return new ProductCheckBeanPostProcessor();
     }
 
-
     @Bean
     public Product aaa() {
         Battery p1 = new Battery();
@@ -54,6 +53,5 @@ public class ShopConfiguration {
         c1.setPath("c:/Windows/Temp/cashier");
         return c1;
     }
-
 
 }

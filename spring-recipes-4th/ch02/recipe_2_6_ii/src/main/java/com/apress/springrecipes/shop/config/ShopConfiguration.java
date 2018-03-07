@@ -17,6 +17,7 @@ import com.apress.springrecipes.shop.Product;
 @PropertySource("classpath:discounts.properties")
 @ComponentScan("com.apress.springrecipes.shop")
 public class ShopConfiguration {
+
     @Value("${specialcustomer.discount:0}")
     private double specialCustomerDiscountField;
 

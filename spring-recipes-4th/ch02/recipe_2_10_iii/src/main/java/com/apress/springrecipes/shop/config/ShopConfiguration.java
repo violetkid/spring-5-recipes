@@ -11,6 +11,7 @@ import com.apress.springrecipes.shop.DiscountFactoryBean;
 @Configuration
 @ComponentScan("com.apress.springrecipes.shop")
 public class ShopConfiguration {
+
     @Bean
     public Battery aaa() {
         Battery aaa = new Battery("AAA", 2.5);

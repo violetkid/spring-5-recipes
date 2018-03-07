@@ -20,7 +20,6 @@ public class CalculatorIntroduction {
             defaultImpl = MinCalculatorImpl.class)
     public MinCalculator minCalculator;
 
-
     @DeclareParents(
             value = "com.apress.springrecipes.calculator.*CalculatorImpl",
             defaultImpl = CounterImpl.class)

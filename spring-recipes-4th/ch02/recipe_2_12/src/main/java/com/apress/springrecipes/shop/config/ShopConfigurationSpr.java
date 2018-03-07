@@ -11,6 +11,7 @@ import com.apress.springrecipes.shop.Product;
 @Configuration
 @Profile("spring")
 public class ShopConfigurationSpr {
+
     @Bean
     public Product aaa() {
         Battery p1 = new Battery();

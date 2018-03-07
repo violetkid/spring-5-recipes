@@ -43,6 +43,6 @@ public class Cashier implements BeanNameAware {
 
     @Override
     public void setBeanName(String name) {
-        this.fileName=name;
+        this.fileName = name;
     }
 }

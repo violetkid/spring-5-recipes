@@ -13,5 +13,5 @@
         <context:include-filter type="regex"
                                 expression="com\.apress\.springrecipes\.shop\..*Cashier.*"/>
     </context:component-scan>
-</beans> 
 
+</beans>

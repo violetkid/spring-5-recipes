@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+
         context.getEnvironment().setActiveProfiles("global", "winter");
         context.scan("com.apress.springrecipes.shop");
         context.refresh();

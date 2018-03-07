@@ -25,6 +25,5 @@ public class Main {
         ShoppingCart cart2 = context.getBean("shoppingCart", ShoppingCart.class);
         cart2.addItem(dvdrw);
         System.out.println("Shopping cart 2 contains " + cart2.getItems());
-
     }
 }

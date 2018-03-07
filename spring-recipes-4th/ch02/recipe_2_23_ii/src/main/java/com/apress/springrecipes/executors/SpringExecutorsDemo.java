@@ -29,17 +29,12 @@ public class SpringExecutorsDemo {
         syncTaskExecutor.execute(task);
         taskExecutorAdapter.submit(task);
         asyncTaskExecutor.submit(task);
-                      
-                      /* will do 100 at a time, 
-                             then queue the rest, ie,
-                             should take round 5 seconds total 
-                         */
+
         for (int i = 0; i < 500; i++)
             threadPoolTaskExecutor.submit(task);
     }
 
     public static void main(String[] args) {
-
         new AnnotationConfigApplicationContext(ExecutorsConfiguration.class)
                 .registerShutdownHook();
     }

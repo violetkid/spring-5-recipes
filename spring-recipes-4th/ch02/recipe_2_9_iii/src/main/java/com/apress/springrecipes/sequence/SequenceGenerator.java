@@ -3,6 +3,7 @@ package com.apress.springrecipes.sequence;
 import org.springframework.beans.factory.annotation.Required;
 
 public class SequenceGenerator {
+
     private PrefixGenerator prefixGenerator;
     private String suffix;
     private int initial;

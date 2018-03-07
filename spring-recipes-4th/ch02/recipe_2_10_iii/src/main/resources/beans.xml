@@ -36,7 +36,6 @@
         <property name="discount" value="0.1"/>
     </bean>
 
-
     <bean id="shoppingCart" class="com.apress.springrecipes.shop.ShoppingCart" scope="prototype"/>
 
 </beans>

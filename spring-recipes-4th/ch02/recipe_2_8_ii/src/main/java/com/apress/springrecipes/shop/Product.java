@@ -20,7 +20,7 @@ public abstract class Product {
         return name;
     }
 
-    // Getters and Setters
+    // 게터와 세터
     public void setName(String name) {
         this.name = name;
     }
@@ -42,7 +42,6 @@ public abstract class Product {
     }
 
     public String toString() {
-        DecimalFormat df = new DecimalFormat("#%");
         return name + " " + price;
     }
 }

@@ -3,6 +3,7 @@ package com.apress.springrecipes.sequence;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class SequenceGenerator {
+
     private PrefixGenerator prefixGenerator;
     private String suffix;
     private int initial;
