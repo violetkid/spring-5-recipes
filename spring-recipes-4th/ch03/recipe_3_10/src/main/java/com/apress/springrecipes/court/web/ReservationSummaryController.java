@@ -19,7 +19,6 @@ public class ReservationSummaryController {
 
     private final ReservationService reservationService;
 
-    // Wire service available in application context 
     @Autowired
     public ReservationSummaryController(ReservationService reservationService) {
         this.reservationService = reservationService;

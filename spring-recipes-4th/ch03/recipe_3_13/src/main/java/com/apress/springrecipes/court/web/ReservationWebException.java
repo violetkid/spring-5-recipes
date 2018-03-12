@@ -3,6 +3,7 @@ package com.apress.springrecipes.court.web;
 import java.util.Date;
 
 public class ReservationWebException extends RuntimeException {
+
     public static final long serialVersionUID = 1L;
     private String message;
     private String stack;

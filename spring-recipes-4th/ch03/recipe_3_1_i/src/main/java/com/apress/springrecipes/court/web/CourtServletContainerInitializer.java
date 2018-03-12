@@ -11,7 +11,7 @@ import javax.servlet.ServletRegistration;
 import java.util.Set;
 
 /**
- * {@link ServletContainerInitializer} implementation to bootstrap the {@link DispatcherServlet}.
+ * {@link DispatcherServlet}를 시동하기 위한 {@link ServletContainerInitializer} 구현체
  */
 public class CourtServletContainerInitializer implements ServletContainerInitializer {
 
@@ -32,7 +32,5 @@ public class CourtServletContainerInitializer implements ServletContainerInitial
         ServletRegistration.Dynamic courtRegistration = ctx.addServlet("court", dispatcherServlet);
         courtRegistration.setLoadOnStartup(1);
         courtRegistration.addMapping("/");
-
-
     }
 }

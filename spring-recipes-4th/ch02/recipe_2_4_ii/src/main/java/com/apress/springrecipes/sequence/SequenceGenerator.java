@@ -3,9 +3,11 @@ package com.apress.springrecipes.sequence;
 import javax.inject.Inject;
 
 public class SequenceGenerator {
+
     @Inject
     @DatePrefixAnnotation
     private PrefixGenerator prefixGenerator;
+
     private String suffix;
     private int initial;
     private int counter;

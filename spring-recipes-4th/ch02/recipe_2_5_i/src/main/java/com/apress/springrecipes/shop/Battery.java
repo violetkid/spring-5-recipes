@@ -16,7 +16,7 @@ public class Battery extends Product {
         return rechargeable;
     }
 
-    // °ÔÅÍ ¹× ¼¼ÅÍ
+    // ê²Œí„° ë° ì„¸í„°
     public void setRechargeable(boolean rechargeable) {
         this.rechargeable = rechargeable;
     }

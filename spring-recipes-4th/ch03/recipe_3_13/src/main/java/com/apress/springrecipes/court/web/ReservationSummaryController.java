@@ -1,4 +1,3 @@
-// FINAL
 package com.apress.springrecipes.court.web;
 
 import com.apress.springrecipes.court.domain.Reservation;
@@ -20,8 +19,6 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-// Bind controller to URL /reservationSummary
-// initial view will be resolved to the name returned in the default GET method
 @RequestMapping("/reservationSummary*")
 public class ReservationSummaryController {
 
@@ -31,38 +28,13 @@ public class ReservationSummaryController {
         this.reservationService = reservationService;
     }
 
-    // Note date parameter marked a required="true" inside first method
-    // If the URL does not match /reservationSummary*?date=* the method will not execute 
-    // NOTE: Since this is the default(and only) GET method,
-    //       an error will thrown if there is no match(e.g. no date is passed as to URL) 
     @RequestMapping(method = RequestMethod.GET)
     public String generateSummary(
             @RequestParam(required = true, value = "date") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate selectedDate, Model model) {
-        // Create an empty reservation list
-        List<Reservation> reservations = reservationService.findByDate(selectedDate);
 
-        // Now that the date has passed, add reservations (if any)
-        // Add reservations object to model so it can be display in a view
+        List<Reservation> reservations = reservationService.findByDate(selectedDate);
         model.addAttribute("reservations", reservations);
-        // Check request extension
-        /**
-         if(request.getServletPath().endsWith(".pdf")) {
-         // PDF extension
-         // Return view pdfSummary. Via resolver the view
-         // is mapped to the class PdfReservationSummary
-         // as defined in views.properties
-         return "pdfSummary";
-         } else if(request.getServletPath().endsWith(".xls")) {
-         // Excel extension
-         // Return view xlsSummary. Via resolver the view
-         // is mapped to the class ExcelReservationSummary
-         // as defined in views.properties
-         return "excelSummary";
-         } else {
-         // Any other extension return the file system view reservationSummary
-         // Via resolver it will be mapped to /WEB-INF/jsp/reservationSummary.jsp
-         return "reservationSummary";
-         }*/
+
         return "reservationSummary";
     }
 

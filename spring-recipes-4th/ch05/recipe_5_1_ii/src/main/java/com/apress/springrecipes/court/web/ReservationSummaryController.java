@@ -1,4 +1,3 @@
-// FINAL
 package com.apress.springrecipes.court.web;
 
 import com.apress.springrecipes.court.domain.Reservation;
@@ -32,9 +31,9 @@ public class ReservationSummaryController {
     }
 
     // Note date parameter marked a required="true" inside first method
-    // If the URL does not match /reservationSummary*?date=* the method will not execute 
+    // If the URL does not match /reservationSummary*?date=* the method will not execute
     // NOTE: Since this is the default(and only) GET method,
-    //       an error will thrown if there is no match(e.g. no date is passed as to URL) 
+    //       an error will thrown if there is no match(e.g. no date is passed as to URL)
     @RequestMapping(method = RequestMethod.GET)
     public String generateSummary(
             @RequestParam(required = true, value = "date") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate selectedDate, Model model) {

@@ -1,4 +1,3 @@
-// Final 
 package com.apress.springrecipes.court.domain;
 
 public class Member {

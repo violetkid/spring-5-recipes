@@ -17,7 +17,7 @@ public abstract class Product {
         return name;
     }
 
-    // ∞‘≈Õ π◊ ºº≈Õ
+    // Í≤åÌÑ∞ Î∞è ÏÑ∏ÌÑ∞
     public void setName(String name) {
         this.name = name;
     }

@@ -1,4 +1,4 @@
-//FINAL 
+//FINAL
 package com.apress.springrecipes.court.web;
 
 import com.apress.springrecipes.court.domain.Member;
@@ -14,7 +14,7 @@ public class MemberController {
 
     private MemberService memberService;
 
-    // Wire service in constructor, available in application context
+    // 애플리케이션 컨텍스트에서 사용 가능한 서비스를 생성자에 연결합니다.
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
@@ -27,14 +27,13 @@ public class MemberController {
     }
 
 
-    // Method mapped to URL /member/remove and /member/delete
+    // 메서드를 /member/remove, /member/delete 두 URL에 매핑합니다.
     @RequestMapping(value = {"/member/remove", "/member/delete"}, method = RequestMethod.GET)
     public String removeMember(@RequestParam("memberName")
                                        String memberName) {
         memberService.remove(memberName);
 
-        // Use redirect so list is refreshed
-        // Since the Controller uses a wildcard, any URL will do, use root ':'(i.e./member/)
+        // 리스트를 갱신하기 위해 리다이렉트합니다.
         return "redirect:";
     }
 }

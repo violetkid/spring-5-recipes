@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
- * Configuration class to setup Spring MVC.
+ * 스프링 MVC 구성 클래스
  *
  * @author Marten Deinum
  */

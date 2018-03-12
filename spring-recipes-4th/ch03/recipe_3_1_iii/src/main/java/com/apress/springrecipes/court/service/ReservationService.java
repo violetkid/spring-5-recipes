@@ -8,5 +8,4 @@ public interface ReservationService {
 
     List<Reservation> query(String courtName);
 
-
 }

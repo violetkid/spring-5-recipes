@@ -7,6 +7,7 @@ import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 
 import java.util.HashMap;
@@ -39,6 +40,15 @@ public class ViewResolverConfiguration implements WebMvcConfigurer {
 
         ContentNegotiatingViewResolver viewResolver = new ContentNegotiatingViewResolver();
         viewResolver.setContentNegotiationManager(contentNegotiationManager);
+        return viewResolver;
+    }
+
+    @Bean
+    public InternalResourceViewResolver internalResourceViewResolver() {
+
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setPrefix("/WEB-INF/jsp/");
+        viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
 

@@ -5,7 +5,7 @@ import com.apress.springrecipes.court.config.InterceptorConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
- * {@link org.springframework.web.WebApplicationInitializer} implementation to bootstrap the application.
+ * {@link DispatcherServlet}를 시동하기 위한 {@link ServletContainerInitializer} 구현체
  */
 public class CourtWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 

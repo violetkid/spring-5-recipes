@@ -1,4 +1,3 @@
-// FINAL 
 package com.apress.springrecipes.court.web;
 
 import org.springframework.web.servlet.ModelAndView;
@@ -9,12 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 public class MeasurementInterceptor extends HandlerInterceptorAdapter {
 
+    @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         long startTime = System.currentTimeMillis();
         request.setAttribute("startTime", startTime);
         return true;
     }
 
+    @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         long startTime = (Long) request.getAttribute("startTime");
         request.removeAttribute("startTime");

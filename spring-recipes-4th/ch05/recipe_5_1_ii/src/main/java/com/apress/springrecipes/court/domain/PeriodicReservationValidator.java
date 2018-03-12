@@ -8,10 +8,12 @@ import org.springframework.validation.Validator;
 @Component
 public class PeriodicReservationValidator implements Validator {
 
+    @Override
     public boolean supports(Class<?> clazz) {
         return PeriodicReservation.class.isAssignableFrom(clazz);
     }
 
+    @Override
     public void validate(Object target, Errors errors) {
         validateCourt(target, errors);
         validateTime(target, errors);

@@ -29,10 +29,7 @@ import com.apress.springrecipes.court.service.ReservationService;
 
 
 @Controller
-// Bind controller to URL /periodicReservationForm
-// initial view will be resolved to the name returned in the default GET method
 @RequestMapping("/periodicReservationForm")
-// Add Reservation object to session, since its used in various pages/forms
 @SessionAttributes("reservation")
 public class PeriodicReservationController {
 
@@ -40,7 +37,6 @@ public class PeriodicReservationController {
     private final ReservationService reservationService;
     private final PeriodicReservationValidator validator;
 
-    // Wire service and validator in constructor, available in application context 
     public PeriodicReservationController(ReservationService reservationService,
                                          PeriodicReservationValidator periodicReservationValidator) {
         this.reservationService = reservationService;
@@ -54,24 +50,15 @@ public class PeriodicReservationController {
         pageForms.put(2, "reservationPlayerForm");
     }
 
-    // Controller will always look for a default GET method to call first, irrespective of name
-    // In this case, named setupForm to ease identification
     @GetMapping
-    // Method contain a Model input to setup reservation object
     public String setupForm(Model model) {
-        // Create inital reservation object
         PeriodicReservation reservation = new PeriodicReservation();
-        // Set player for reservation object
         reservation.setPlayer(new Player());
-        // Add reservation to model so it can be display in views
         model.addAttribute("reservation", reservation);
-        // Return view as a string
-        // Based on resolver configuration the reservationCourtForm view
-        // will be mapped to a JSP in /WEB-INF/jsp/reservationCourtForm.jsp
+
         return "reservationCourtForm";
     }
 
-    // Post Mapping which will be called when the _cancel property is present in the URL
     @PostMapping(params = {"_cancel"})
     public String cancelForm(
             @ModelAttribute("reservation") PeriodicReservation reservation, BindingResult result,
@@ -80,57 +67,41 @@ public class PeriodicReservationController {
 
     }
 
-    // Register the validator so that we can use @Validated to validate the entire object.
-    // Instead we could also have called validator.validate in the completeForm method
     @InitBinder
     public void initBinder(WebDataBinder binder) {
         binder.setValidator(this.validator);
     }
 
-    // Post Mapping which will be called when the _finish property is present in the URL
     @PostMapping(params = {"_finish"})
     public String completeForm(
             @Validated @ModelAttribute("reservation") PeriodicReservation reservation,
             BindingResult result, SessionStatus status,
             @RequestParam("_page") int currentPage) {
         if (!result.hasErrors()) {
-            // No errors make reservation
             reservationService.makePeriodic(reservation);
-            // Set complete, mark the handler's session processing as complete
-            // Allowing for cleanup of session attributes.
             status.setComplete();
-            // Redirect to reservationSuccess URL, defined in ReservationSuccessController
             return "redirect:reservationSuccess";
         } else {
-            // Errors, this should always be "reservationPlayerForm" since its the last one, use HashMap anyways
-            // return user to current view to correct
             return pageForms.get(currentPage);
         }
     }
 
-    // Controller will always look for a default POST method irrespective of name
-    // when a submission ocurrs on the URL (i.e.@RequestMapping(/periodicReservationForm)) 
-    // In this case, named submitForm to ease identification
     @PostMapping
     public String submitForm(
             HttpServletRequest request,
             @ModelAttribute("reservation") PeriodicReservation reservation,
             BindingResult result, @RequestParam("_page") int currentPage) {
-        // Extract target page
+
         int targetPage = getTargetPage(request, "_target", currentPage);
-        // If targetPage is lesser than current page, user clicked 'Previous'
+
         if (targetPage < currentPage) {
-            // Return to target page view
             return pageForms.get(targetPage);
         }
-        // User clicked 'Next'
-        // Validate data based on page
+
         validateCurrentPage(reservation, result, currentPage);
         if (!result.hasErrors()) {
-            // No errors, return target page
             return pageForms.get(targetPage);
         } else {
-            // Errors, return current page
             return pageForms.get(currentPage);
         }
     }
@@ -149,8 +120,6 @@ public class PeriodicReservationController {
         }
     }
 
-    // Create attribute for model 
-    // Will be represented as drop box containing "Daily, Weekly" values in reservationTimeForm
     @ModelAttribute("periods")
     public Map<Integer, String> periods() {
         Map<Integer, String> periods = new HashMap<>();
@@ -183,7 +152,5 @@ public class PeriodicReservationController {
             }
         }
         return currentPage;
-
-
     }
 }

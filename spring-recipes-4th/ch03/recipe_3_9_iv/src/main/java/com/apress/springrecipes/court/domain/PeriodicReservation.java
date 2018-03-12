@@ -8,11 +8,11 @@ public class PeriodicReservation {
 
     private String courtName;
 
-    // Accept the time in the SO Date Format {@code yyyy-MM-dd}
+    // ISO 날짜 포맷으로 시간을 받습니다. {@code yyyy-MM-dd}
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate fromDate;
 
-    // Accept the time in the SO Date Format {@code yyyy-MM-dd}
+    // ISO 날짜 포맷으로 시간을 받습니다. {@code yyyy-MM-dd}
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate toDate;
     private int period;

@@ -8,12 +8,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 
 /**
- * Configuration class to trigger scanning for all {@code @Component} annotated classes and to enable Spring MVC
- * processing with the {@link EnableWebMvc} annotation. Further modification is done through smaller additional
- * configuration files in the different recipes.
- *
- * @author Marten Deinum
- * @since 4.0.0
+ * Created by marten on 14-02-17.
  */
 @Configuration
 @ComponentScan("com.apress.springrecipes.court")

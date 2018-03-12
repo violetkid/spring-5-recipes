@@ -1,4 +1,3 @@
-// FINAL
 package com.apress.springrecipes.court.web;
 
 import com.apress.springrecipes.court.domain.Player;
@@ -32,7 +31,7 @@ public class ReservationFormController {
     }
 
 
-    // Create attribute for model 
+    // Create attribute for model
     // Will be represented as drop box Sport Types in reservationForm
     @ModelAttribute("sportTypes")
     public List<SportType> populateSportTypes() {
@@ -56,16 +55,16 @@ public class ReservationFormController {
         // Based on resolver configuration the reservationForm view
         // will be mapped to a JSP in /WEB-INF/jsp/reservationForm.jsp
         // NOTE: If the method would have a void return value, by default the method would have
-        //       looked for the same reservationForm view, since the default URL for the 
+        //       looked for the same reservationForm view, since the default URL for the
         //       controller is this same name @RequestMapping("/reservationForm")
         return "reservationForm";
     }
 
     // Controller will always look for a default POST method irrespective of name
-    // when a submission ocurrs on the URL (i.e.@RequestMapping(/reservationForm)) 
+    // when a submission ocurrs on the URL (i.e.@RequestMapping(/reservationForm))
     // In this case, named submitForm to ease identification
     @PostMapping
-    // Model reservation object, BindingResult and SessionStatus as parameters 
+    // Model reservation object, BindingResult and SessionStatus as parameters
     public Callable<String> submitForm(
             @ModelAttribute("reservation") @Valid Reservation reservation,
             BindingResult result, SessionStatus status) {

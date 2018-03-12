@@ -11,10 +11,12 @@ import java.time.LocalDate;
 @Component
 public class ReservationValidator implements Validator {
 
+    @Override
     public boolean supports(Class<?> clazz) {
         return Reservation.class.isAssignableFrom(clazz);
     }
 
+    @Override
     public void validate(Object target, Errors errors) {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "courtName",
                 "required.courtName", "Court name is required.");

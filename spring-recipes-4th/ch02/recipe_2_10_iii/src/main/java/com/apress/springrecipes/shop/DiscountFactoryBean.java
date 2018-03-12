@@ -15,10 +15,12 @@ public class DiscountFactoryBean extends AbstractFactoryBean<Product> {
         this.discount = discount;
     }
 
+    @Override
     public Class<?> getObjectType() {
         return product.getClass();
     }
 
+    @Override
     protected Product createInstance() throws Exception {
         product.setPrice(product.getPrice() * (1 - discount));
         return product;

@@ -1,4 +1,3 @@
-// FINAL
 package com.apress.springrecipes.court.web;
 
 import com.apress.springrecipes.court.Delayer;
@@ -38,10 +37,10 @@ public class ReservationQueryController {
     }
 
     // Controller will always look for a default POST method irrespective of name
-    // when a submission ocurrs on the URL (i.e.@RequestMapping(/reservationQuery)) 
+    // when a submission ocurrs on the URL (i.e.@RequestMapping(/reservationQuery))
     // In this case, named submitForm to ease identification
     @PostMapping
-    // Submission will come with courtName field, also add Model to return results 
+    // Submission will come with courtName field, also add Model to return results
     public Callable<String> sumbitForm(@RequestParam("courtName") String courtName, Model model) {
 
         return () -> {

@@ -13,7 +13,7 @@ public abstract class Product {
         this.price = price;
     }
 
-    // 게터와 세터
+    // 게터 및 세터
     public void setName(String name) {
         this.name = name;
     }
