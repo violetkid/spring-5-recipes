@@ -10,9 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 import java.util.Set;
 
-/**
- * {@link DispatcherServlet}를 시동하기 위한 {@link ServletContainerInitializer} 구현체
- */
 public class CourtServletContainerInitializer implements ServletContainerInitializer {
 
     public static final String MSG = "Starting Court Web Application";

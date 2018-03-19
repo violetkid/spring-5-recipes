@@ -31,26 +31,20 @@ public class ReservationQueryController {
     @GetMapping
     public void setupForm() {}
 
-    // Controller will always look for a default POST method irrespective of name
-    // when a submission ocurrs on the URL (i.e.@RequestMapping(/reservationQuery))
-    // In this case, named submitForm to ease identification
     @PostMapping
-    // Submission will come with courtName field, also add Model to return results
     public DeferredResult<String> sumbitForm(@RequestParam("courtName") String courtName, Model model) {
         final DeferredResult<String> result = new DeferredResult<>();
 
         taskExecutor.execute(() -> {
             List<Reservation> reservations = java.util.Collections.emptyList();
-            // Make a query if parameter is not null
+
             if (courtName != null) {
-                Delayer.randomDelay(); // Simulate a slow service
+                Delayer.randomDelay();
                 reservations = reservationService.query(courtName);
             }
-            // Update model to include reservations
+
             model.addAttribute("reservations", reservations);
-            // Return view as a string
-            // Based on resolver configuration the reservationQuery view
-            // will be mapped to a JSP in /WEB-INF/jsp/reservationQuery.jsp
+
             result.setResult("reservationQuery");
         });
 

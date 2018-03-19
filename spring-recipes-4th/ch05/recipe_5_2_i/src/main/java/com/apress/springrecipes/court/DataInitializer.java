@@ -27,8 +27,8 @@ public class DataInitializer {
     @PostConstruct
     public void init() {
 
-
         List<SportType> sportTypes = reservationService.getAllSportTypes();
+
         for (int i = 0; i < 100 ; i++) {
             int type = rnd.nextInt(sportTypes.size());
             int courtNum = rnd.nextInt(3);
