@@ -9,9 +9,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- * Created by marten on 16-06-14.
- */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Members {

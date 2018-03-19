@@ -5,9 +5,6 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
 import java.io.IOException;
 
-/**
- * Created by marten on 02-07-17.
- */
 public class OtherMain {
 
     public static void main(String[] args) throws IOException {

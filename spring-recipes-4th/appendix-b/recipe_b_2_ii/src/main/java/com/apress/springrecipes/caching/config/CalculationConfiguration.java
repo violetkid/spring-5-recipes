@@ -9,9 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 
-/**
- * Created by marten on 15-08-14.
- */
 @Configuration
 public class CalculationConfiguration {
 

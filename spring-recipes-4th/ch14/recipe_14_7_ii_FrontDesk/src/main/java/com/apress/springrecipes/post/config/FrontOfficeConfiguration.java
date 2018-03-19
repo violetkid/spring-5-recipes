@@ -15,9 +15,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 import com.apress.springrecipes.post.FrontDeskImpl;
 
-/**
- * Created by marten on 03-06-14.
- */
 @Configuration
 @EnableScheduling
 public class FrontOfficeConfiguration {

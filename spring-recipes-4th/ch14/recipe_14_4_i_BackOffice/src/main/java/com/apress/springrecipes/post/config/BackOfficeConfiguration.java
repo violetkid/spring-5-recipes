@@ -9,9 +9,6 @@ import org.springframework.jms.listener.SimpleMessageListenerContainer;
 
 import com.apress.springrecipes.post.MailListener;
 
-/**
- * Created by marten on 02-06-14.
- */
 @Configuration
 public class BackOfficeConfiguration {
 

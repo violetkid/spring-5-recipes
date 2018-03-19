@@ -6,10 +6,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-
-/**
- * Created by marten on 14-02-17.
- */
 @Configuration
 @ComponentScan("com.apress.springrecipes.court")
 @EnableWebMvc

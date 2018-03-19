@@ -14,9 +14,6 @@ import org.springframework.kafka.core.ProducerFactory;
 
 import com.apress.springrecipes.post.FrontDeskImpl;
 
-/**
- * Created by marten on 03-06-14.
- */
 @Configuration
 public class FrontOfficeConfiguration {
 

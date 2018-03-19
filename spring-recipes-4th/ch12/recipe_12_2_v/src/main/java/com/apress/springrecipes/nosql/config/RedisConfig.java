@@ -7,9 +7,6 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 
-/**
- * Created by marten on 29-09-14.
- */
 @Configuration
 public class RedisConfig {
 

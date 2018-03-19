@@ -17,14 +17,11 @@ public class RestMemberController {
     @Autowired
     public RestMemberController(MemberService memberService) {
         super();
-        this.memberService=memberService;
+        this.memberService = memberService;
     }
 
     @RequestMapping(value="/members", produces=MediaType.APPLICATION_XML_VALUE)
     public String getRestMembersXml(Model model) {
-        // Return view membertemplate. Via resolver the view
-        // will be mapped to a JAXB Marshaller bound to the Member class
-
         Members members = new Members();
         members.addMembers(memberService.findAll());
         model.addAttribute("members", members);
@@ -33,9 +30,6 @@ public class RestMemberController {
 
     @RequestMapping(value="/members", produces= MediaType.APPLICATION_JSON_VALUE)
     public String getRestMembersJson(Model model) {
-        // Return view jsonmembertemplate. Via resolver the view
-        // will be mapped to a jackson ObjectMapper bound to the Member class
-
         Members members = new Members();
         members.addMembers(memberService.findAll());
         model.addAttribute("members", members);

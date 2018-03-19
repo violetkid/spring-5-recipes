@@ -36,7 +36,6 @@ class InMemoryMemberService implements MemberService {
         members.put(3L, m3);
     }
 
-
     @Override
     public java.util.Collection<Member> findAll() {
         return members.values();

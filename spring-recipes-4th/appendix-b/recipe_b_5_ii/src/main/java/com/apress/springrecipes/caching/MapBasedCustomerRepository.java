@@ -7,9 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * Created by marten on 18-08-14.
- */
 public class MapBasedCustomerRepository implements CustomerRepository {
 
     private final Map<Long, Customer> repository = new HashMap<>();

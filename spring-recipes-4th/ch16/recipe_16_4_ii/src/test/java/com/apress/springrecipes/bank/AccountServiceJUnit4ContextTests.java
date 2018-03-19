@@ -10,9 +10,6 @@ import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
 import com.apress.springrecipes.bank.config.BankConfiguration;
 
-/**
- * Created by marten on 16-06-14.
- */
 @ContextConfiguration(classes = BankConfiguration.class)
 public class AccountServiceJUnit4ContextTests extends AbstractJUnit4SpringContextTests {
 

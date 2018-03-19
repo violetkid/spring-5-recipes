@@ -9,9 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jmx.support.MBeanServerConnectionFactoryBean;
 
-/**
- * Created by marten on 26-05-14.
- */
 @Configuration
 public class JmxClientConfiguration {
 

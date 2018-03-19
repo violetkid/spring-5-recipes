@@ -6,9 +6,6 @@ import org.springframework.context.annotation.Configuration;
 import com.apress.springrecipes.replicator.EmailErrorNotifier;
 import com.apress.springrecipes.replicator.ErrorNotifier;
 
-/**
- * Created by marten on 26-05-14.
- */
 @Configuration
 public class MailConfiguration {
 

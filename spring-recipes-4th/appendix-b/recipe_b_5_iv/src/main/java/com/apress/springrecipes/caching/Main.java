@@ -7,9 +7,6 @@ import org.springframework.util.StopWatch;
 
 import com.apress.springrecipes.caching.config.CustomerConfiguration;
 
-/**
- * Created by marten on 15-08-14.
- */
 public class Main {
 
     public static final void main(String[] args) throws Exception {

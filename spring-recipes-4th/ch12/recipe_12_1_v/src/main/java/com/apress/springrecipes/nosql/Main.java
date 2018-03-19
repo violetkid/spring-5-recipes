@@ -10,9 +10,6 @@ import org.springframework.context.support.AbstractApplicationContext;
 
 import com.apress.springrecipes.nosql.config.MongoConfiguration;
 
-/**
- * Created by marten on 22-09-14.
- */
 public class Main {
 
     public static final String DB_NAME = "vehicledb";

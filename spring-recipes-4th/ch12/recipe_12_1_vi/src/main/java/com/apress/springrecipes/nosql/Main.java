@@ -10,9 +10,6 @@ import com.apress.springrecipes.nosql.config.MongoConfiguration;
 
 import reactor.core.publisher.Flux;
 
-/**
- * Created by marten on 22-09-14.
- */
 public class Main {
 
     public static void main(String[] args) throws Exception {

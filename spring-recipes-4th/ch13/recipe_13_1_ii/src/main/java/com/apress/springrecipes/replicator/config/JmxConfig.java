@@ -11,9 +11,6 @@ import org.springframework.jmx.support.MBeanServerFactoryBean;
 
 import com.apress.springrecipes.replicator.FileReplicator;
 
-/**
- * Created by marten on 21-05-14.
- */
 @Configuration
 public class JmxConfig {
 

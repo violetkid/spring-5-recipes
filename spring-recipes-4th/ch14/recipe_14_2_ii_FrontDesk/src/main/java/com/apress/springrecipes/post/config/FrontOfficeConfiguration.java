@@ -10,9 +10,6 @@ import org.springframework.jms.core.JmsTemplate;
 import com.apress.springrecipes.post.FrontDeskImpl;
 import com.apress.springrecipes.post.MailMessageConverter;
 
-/**
- * Created by marten on 02-06-14.
- */
 @Configuration
 public class FrontOfficeConfiguration {
 

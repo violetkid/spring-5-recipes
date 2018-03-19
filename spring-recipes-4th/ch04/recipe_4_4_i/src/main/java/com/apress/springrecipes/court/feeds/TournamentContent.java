@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class TournamentContent {
+
     private static final AtomicInteger idCounter = new AtomicInteger();
     private final String author;
     private final Date publicationDate;
@@ -19,7 +20,6 @@ public class TournamentContent {
         this.link = link;
         this.id = id;
     }
-
 
     public String getAuthor() {
         return author;
@@ -44,5 +44,4 @@ public class TournamentContent {
     public static TournamentContent of(String author, Date date, String name, String link) {
         return new TournamentContent(author, date, name, link, idCounter.incrementAndGet());
     }
-
 }

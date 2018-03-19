@@ -7,9 +7,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.apress.springrecipes.vehicle.config.VehicleConfiguration;
 
-/**
- * Created by marten on 24-03-14.
- */
 public class Main {
 
     public static void main(String[] args) throws Exception {

@@ -2,9 +2,6 @@ package com.apress.springrecipes.court;
 
 import org.springframework.web.client.RestTemplate;
 
-/**
- * Created by marten on 16-06-14.
- */
 public class Main {
 
     public static void main(String[] args) throws Exception {

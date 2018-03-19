@@ -9,9 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Created by marten on 14-07-14.
- */
 @Controller()
 @RequestMapping("/user/twitter")
 public class TwitterController {

@@ -7,9 +7,6 @@ import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Created by marten on 15-08-14.
- */
 @Configuration
 public class CalculationConfiguration {
 

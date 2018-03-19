@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by marten on 10-10-14.
- */
 public class Character {
 
     private Long id;

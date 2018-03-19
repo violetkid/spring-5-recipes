@@ -1,8 +1,5 @@
 package com.apress.springrecipes.cloud;
 
-/**
- * Created by marten on 06-10-14.
- */
 public class Contact {
 
     private long id;

@@ -16,9 +16,6 @@ import org.springframework.social.twitter.connect.TwitterConnectionFactory;
 
 import com.apress.springrecipes.social.StaticUserIdSource;
 
-/**
- * Created by marten on 14-07-14.
- */
 @Configuration
 @EnableSocial
 @PropertySource("classpath:/application.properties")

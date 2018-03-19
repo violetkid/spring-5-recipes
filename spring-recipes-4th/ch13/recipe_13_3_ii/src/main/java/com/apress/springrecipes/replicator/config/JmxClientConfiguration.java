@@ -12,9 +12,6 @@ import org.springframework.jmx.support.MBeanServerConnectionFactoryBean;
 
 import com.apress.springrecipes.replicator.FileReplicator;
 
-/**
- * Created by marten on 26-05-14.
- */
 @Configuration
 public class JmxClientConfiguration {
 

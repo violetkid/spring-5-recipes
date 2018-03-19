@@ -5,9 +5,6 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-/**
- * Created by marten on 24-03-14.
- */
 public class VehicleRowMapper implements RowMapper<Vehicle> {
     @Override
     public Vehicle mapRow(ResultSet rs, int rowNum) throws SQLException {

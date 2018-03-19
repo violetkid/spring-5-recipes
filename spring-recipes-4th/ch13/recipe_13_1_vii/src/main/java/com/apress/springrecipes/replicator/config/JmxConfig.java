@@ -5,9 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jmx.export.MBeanExporter;
 import org.springframework.jmx.export.annotation.AnnotationMBeanExporter;
 
-/**
- * Created by marten on 21-05-14.
- */
 @Configuration
 public class JmxConfig {
 

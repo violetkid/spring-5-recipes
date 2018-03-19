@@ -1,4 +1,3 @@
-//FINAL 
 package com.apress.springrecipes.court.web;
 
 import java.util.ArrayList;
@@ -14,6 +13,7 @@ import com.apress.springrecipes.court.feeds.TournamentContent;
 
 @Controller
 public class FeedController {
+
     @RequestMapping("/atomfeed")
     public String getAtomFeed(Model model) {
         List<TournamentContent> tournamentList = new ArrayList<>();

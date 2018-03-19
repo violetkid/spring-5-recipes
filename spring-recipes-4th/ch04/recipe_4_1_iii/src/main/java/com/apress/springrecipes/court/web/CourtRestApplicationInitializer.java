@@ -4,9 +4,6 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import com.apress.springrecipes.court.web.config.CourtRestConfiguration;
 
-/**
- * Created by marten on 28-04-14.
- */
 public class CourtRestApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override

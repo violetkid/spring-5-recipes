@@ -128,15 +128,6 @@ public class PeriodicReservationController {
         return periods;
     }
 
-    /**
-     * Prior to Spring 5 this code was part of the {@code WebUtils} utility class (with a deprecation notice). For use
-     * with the newer version of Spring the code has been moved here.
-     *
-     * @param request     the request
-     * @param paramPrefix the prefix to look for
-     * @param currentPage the current page.
-     * @return the tagetPage number when found otherwise currentPage
-     */
     private int getTargetPage(HttpServletRequest request, String paramPrefix, int currentPage) {
         Enumeration<String> paramNames = request.getParameterNames();
         while (paramNames.hasMoreElements()) {

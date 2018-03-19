@@ -4,9 +4,6 @@ import org.springframework.web.client.RestTemplate;
 
 import com.apress.springrecipes.court.domain.Members;
 
-/**
- * Created by marten on 16-06-14.
- */
 public class Main {
 
     public static void main(String[] args) throws Exception {

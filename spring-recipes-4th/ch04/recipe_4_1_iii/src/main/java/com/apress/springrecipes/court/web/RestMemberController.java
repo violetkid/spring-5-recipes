@@ -15,7 +15,7 @@ public class RestMemberController {
     @Autowired
     public RestMemberController(MemberService memberService) {
         super();
-        this.memberService=memberService;
+        this.memberService = memberService;
     }
 
     @RequestMapping("/members")

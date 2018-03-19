@@ -9,9 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.apress.springrecipes.court.domain.Member;
 
-/**
- * Created by marten on 16-06-14.
- */
 @Service
 class InMemoryMemberService implements MemberService {
 
@@ -38,7 +35,6 @@ class InMemoryMemberService implements MemberService {
         members.put(2L, m2);
         members.put(3L, m3);
     }
-
 
     @Override
     public java.util.Collection<Member> findAll() {

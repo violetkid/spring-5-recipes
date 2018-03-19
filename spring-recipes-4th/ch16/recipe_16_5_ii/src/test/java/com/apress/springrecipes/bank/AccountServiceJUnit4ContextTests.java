@@ -12,9 +12,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.apress.springrecipes.bank.config.BankConfiguration;
 
-/**
- * Created by marten on 16-06-14.
- */
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = BankConfiguration.class)
 public class AccountServiceJUnit4ContextTests {

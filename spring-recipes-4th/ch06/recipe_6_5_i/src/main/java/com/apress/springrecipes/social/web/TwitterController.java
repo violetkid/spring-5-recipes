@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * Created by marten on 06-10-14.
- */
 @Controller
 @RequestMapping("/twitter")
 public class TwitterController {

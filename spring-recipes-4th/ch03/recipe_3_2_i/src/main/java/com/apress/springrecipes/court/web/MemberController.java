@@ -1,4 +1,3 @@
-//FINAL
 package com.apress.springrecipes.court.web;
 
 import com.apress.springrecipes.court.domain.Member;

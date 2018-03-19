@@ -5,9 +5,6 @@ import net.sf.ehcache.Element;
 
 import java.math.BigDecimal;
 
-/**
- * Created by marten on 15-08-14.
- */
 public class PlainCachingCalculationService implements CalculationService {
 
     private final Ehcache cache;

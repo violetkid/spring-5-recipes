@@ -27,7 +27,6 @@ public class RSSFeedView extends AbstractRssFeedView {
         feed.setLastBuildDate(tournamentList.stream().map( TournamentContent::getPublicationDate).sorted().findFirst().orElse(null) );
     }
 
-
     @Override
     protected List<Item> buildFeedItems(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response)
         throws Exception {

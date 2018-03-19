@@ -7,9 +7,6 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import com.apress.springrecipes.mobile.web.config.MobileConfiguration;
 import com.apress.springrecipes.mobile.web.filter.DeviceResolverRequestFilter;
 
-/**
- * Created by marten on 23-06-14.
- */
 public class MobileApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {

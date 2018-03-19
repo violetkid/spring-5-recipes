@@ -9,9 +9,6 @@ import org.springframework.social.security.SocialUserDetails;
 import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.util.Assert;
 
-/**
- * Created by marten on 14-09-14.
- */
 public class SimpleSocialUserDetailsService implements SocialUserDetailsService {
 
     private final UserDetailsService userDetailsService;

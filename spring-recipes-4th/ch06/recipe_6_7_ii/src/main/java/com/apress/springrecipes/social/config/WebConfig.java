@@ -11,9 +11,6 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-/**
- * Created by marten on 14-07-14.
- */
 @EnableWebMvc
 @ComponentScan({"com.apress.springrecipes.social.web"})
 public class WebConfig implements WebMvcConfigurer {

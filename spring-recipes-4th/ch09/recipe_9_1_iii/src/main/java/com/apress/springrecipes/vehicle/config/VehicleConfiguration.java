@@ -9,9 +9,6 @@ import com.apress.springrecipes.vehicle.JdbcVehicleDao;
 import com.apress.springrecipes.vehicle.VehicleDao;
 import com.zaxxer.hikari.HikariDataSource;
 
-/**
- * Created by marten on 27-05-14.
- */
 @Configuration
 public class VehicleConfiguration {
 

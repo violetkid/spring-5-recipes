@@ -27,9 +27,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import com.apress.springrecipes.springbatch.UserRegistration;
 
-/**
- * Created by marten on 17-03-14.
- */
 @Configuration
 public class UserJob {
 

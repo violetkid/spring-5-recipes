@@ -12,9 +12,6 @@ import org.springframework.jms.support.converter.MessageConverter;
 import com.apress.springrecipes.post.MailListener;
 import com.apress.springrecipes.post.MailMessageConverter;
 
-/**
- * Created by marten on 02-06-14.
- */
 @Configuration
 public class BackOfficeConfiguration {
 

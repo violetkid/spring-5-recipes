@@ -8,9 +8,6 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-/**
- * Created by marten on 06-10-14.
- */
 @Configuration
 @EnableWebMvc
 public class ContactWebConfiguration implements WebMvcConfigurer {

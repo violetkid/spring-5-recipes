@@ -12,9 +12,6 @@ import org.springframework.jmx.export.assembler.MBeanInfoAssembler;
 
 import com.apress.springrecipes.replicator.FileReplicator;
 
-/**
- * Created by marten on 21-05-14.
- */
 @Configuration
 public class JmxConfig {
 

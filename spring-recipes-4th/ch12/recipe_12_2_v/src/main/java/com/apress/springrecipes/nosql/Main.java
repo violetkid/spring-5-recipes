@@ -7,9 +7,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 import com.apress.springrecipes.nosql.config.RedisConfig;
 
-/**
- * Created by marten on 29-09-14.
- */
 public class Main {
 
     public static void main(String[] args) throws Exception {

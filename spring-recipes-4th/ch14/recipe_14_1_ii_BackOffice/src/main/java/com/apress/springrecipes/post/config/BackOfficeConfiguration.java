@@ -11,9 +11,6 @@ import org.springframework.jms.core.JmsTemplate;
 
 import com.apress.springrecipes.post.BackOfficeImpl;
 
-/**
- * Created by marten on 02-06-14.
- */
 @Configuration
 public class BackOfficeConfiguration {
 

@@ -1,4 +1,3 @@
-//FINAL
 package com.apress.springrecipes.court.web;
 
 import org.springframework.stereotype.Controller;

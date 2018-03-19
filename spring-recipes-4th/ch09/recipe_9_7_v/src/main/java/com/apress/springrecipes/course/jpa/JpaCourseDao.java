@@ -10,9 +10,6 @@ import javax.persistence.TypedQuery;
 import com.apress.springrecipes.course.Course;
 import com.apress.springrecipes.course.CourseDao;
 
-/**
- * Created by marten on 24-03-14.
- */
 public class JpaCourseDao implements CourseDao {
 
     private final EntityManagerFactory entityManagerFactory;

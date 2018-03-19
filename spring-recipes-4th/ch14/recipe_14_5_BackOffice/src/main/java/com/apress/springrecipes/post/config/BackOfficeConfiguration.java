@@ -12,9 +12,6 @@ import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import com.apress.springrecipes.post.MailListener;
 import com.apress.springrecipes.post.MailMessageConverter;
 
-/**
- * Created by marten on 02-06-14.
- */
 @Configuration
 @EnableJms
 public class BackOfficeConfiguration {

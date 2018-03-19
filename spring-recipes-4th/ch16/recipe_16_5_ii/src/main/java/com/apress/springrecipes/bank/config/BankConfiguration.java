@@ -8,9 +8,6 @@ import com.apress.springrecipes.bank.AccountService;
 import com.apress.springrecipes.bank.AccountServiceImpl;
 import com.apress.springrecipes.bank.InMemoryAccountDao;
 
-/**
- * Created by marten on 16-06-14.
- */
 @Configuration
 public class BankConfiguration {
 

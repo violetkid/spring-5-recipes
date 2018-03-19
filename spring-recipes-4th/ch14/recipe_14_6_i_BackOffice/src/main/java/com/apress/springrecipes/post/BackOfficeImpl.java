@@ -16,9 +16,6 @@ import com.rabbitmq.client.Consumer;
 import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 
-/**
- * Created by marten on 14-02-17.
- */
 @Service
 public class BackOfficeImpl implements BackOffice {
 

@@ -11,9 +11,6 @@ import org.springframework.jms.connection.CachingConnectionFactory;
 
 import com.apress.springrecipes.post.MailListener;
 
-/**
- * Created by marten on 02-06-14.
- */
 @Configuration
 @EnableJms
 public class BackOfficeConfiguration {

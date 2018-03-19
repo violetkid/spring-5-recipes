@@ -11,9 +11,6 @@ import org.testng.annotations.Test;
 
 import com.apress.springrecipes.bank.config.BankConfiguration;
 
-/**
- * Created by marten on 16-06-14.
- */
 @ContextConfiguration(classes = BankConfiguration.class)
 @Sql(scripts="classpath:/bank.sql")
 public class AccountServiceTestNGContextTests extends AbstractTransactionalTestNGSpringContextTests {

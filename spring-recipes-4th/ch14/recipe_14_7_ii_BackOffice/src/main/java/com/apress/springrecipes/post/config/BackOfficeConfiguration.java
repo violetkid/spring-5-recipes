@@ -17,9 +17,6 @@ import org.springframework.kafka.support.converter.StringJsonMessageConverter;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by marten on 02-06-14.
- */
 @Configuration
 @EnableKafka
 public class BackOfficeConfiguration {

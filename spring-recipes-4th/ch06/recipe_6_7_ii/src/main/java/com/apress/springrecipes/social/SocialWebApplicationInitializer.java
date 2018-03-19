@@ -9,9 +9,6 @@ import com.apress.springrecipes.social.config.SecurityConfig;
 import com.apress.springrecipes.social.config.SocialConfig;
 import com.apress.springrecipes.social.config.WebConfig;
 
-/**
- * Created by marten on 14-07-14.
- */
 public class SocialWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {

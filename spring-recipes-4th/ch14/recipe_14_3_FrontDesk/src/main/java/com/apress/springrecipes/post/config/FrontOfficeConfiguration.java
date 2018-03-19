@@ -13,9 +13,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.apress.springrecipes.post.FrontDeskImpl;
 import com.apress.springrecipes.post.MailMessageConverter;
 
-/**
- * Created by marten on 02-06-14.
- */
 @Configuration
 @EnableTransactionManagement
 public class FrontOfficeConfiguration {

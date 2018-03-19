@@ -18,9 +18,6 @@ import org.testng.annotations.Test;
 import com.apress.springrecipes.bank.config.BankConfiguration;
 import com.apress.springrecipes.bank.web.config.BankWebConfiguration;
 
-/**
- * Created by marten on 16-06-14.
- */
 @ContextConfiguration(classes= { BankWebConfiguration.class, BankConfiguration.class})
 @WebAppConfiguration
 public class DepositControllerTestNGContextTests extends AbstractTransactionalTestNGSpringContextTests {

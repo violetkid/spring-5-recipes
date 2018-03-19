@@ -29,9 +29,6 @@ import org.springframework.social.security.AuthenticationNameUserIdSource;
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.social.twitter.connect.TwitterConnectionFactory;
 
-/**
- * Created by marten on 14-07-14.
- */
 @Configuration
 @EnableSocial
 @PropertySource("classpath:/application.properties")
