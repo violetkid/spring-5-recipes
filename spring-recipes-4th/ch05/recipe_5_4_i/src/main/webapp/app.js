@@ -1,5 +1,6 @@
 var ws = null;
-var url = "ws://localhost:8080/echo-ws/echo";
+//var url = "ws://localhost:8080/echo-ws/echo";
+var url = "ws://localhost:8080/recipe_5_4_i/echo";
 
 function setConnected(connected) {
     document.getElementById('connect').disabled = connected;

@@ -1,8 +1,10 @@
 package com.apress.springrecipes.court.web;
 
-import com.apress.springrecipes.court.Delayer;
-import com.apress.springrecipes.court.domain.Reservation;
-import com.apress.springrecipes.court.service.ReservationService;
+import java.io.IOException;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.Callable;
+
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
-import java.io.IOException;
-import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.Callable;
+import com.apress.springrecipes.court.Delayer;
+import com.apress.springrecipes.court.domain.Reservation;
+import com.apress.springrecipes.court.service.ReservationService;
 
 
 @Controller

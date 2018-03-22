@@ -11,14 +11,13 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 public class Initializer implements WebApplicationInitializer {
 
-    public void onStartup(ServletContext container)
-            throws ServletException {
+    @Override
+    public void onStartup(ServletContext container) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.scan("com.apress.springrecipes.weather.config");
 
         ServletRegistration.Dynamic dispatcher = container.addServlet("dispatcher", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/*");
-
     }
 }

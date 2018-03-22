@@ -11,8 +11,9 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 
 
 public class Initializer implements WebApplicationInitializer {
-    public void onStartup(ServletContext container)
-            throws ServletException {
+
+    @Override
+    public void onStartup(ServletContext container) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(WeatherConfig.class);
 
