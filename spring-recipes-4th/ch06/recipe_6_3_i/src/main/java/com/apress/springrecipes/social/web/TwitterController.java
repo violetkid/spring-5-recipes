@@ -15,7 +15,7 @@ public class TwitterController {
     private final ConnectionRepository repository;
 
     public TwitterController(ConnectionRepository repository) {
-        this.repository=repository;
+        this.repository = repository;
     }
 
     @GetMapping(value="/profile")

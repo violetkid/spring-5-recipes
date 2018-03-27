@@ -23,5 +23,5 @@ dependencies {
     compile "org.springframework:spring-context:${springVersion}"
     compile "org.springframework:spring-beans:${springVersion}"
     compile "org.springframework:spring-webmvc:${springVersion}"
-    compile "org.springframework.social:spring-social-config:1.1.4.RELEASE"
+    compile "org.springframework.social:spring-social-config:1.1.6.RELEASE"
 }

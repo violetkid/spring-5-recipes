@@ -6,6 +6,7 @@ import com.apress.springrecipes.social.config.SocialConfig;
 import com.apress.springrecipes.social.config.WebConfig;
 
 public class SocialWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[]{SocialConfig.class};
