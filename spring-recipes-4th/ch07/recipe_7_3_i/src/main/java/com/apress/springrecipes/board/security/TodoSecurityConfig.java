@@ -15,7 +15,7 @@ public class TodoSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("admin@ya2do.io").password("secret").authorities("ADMIN","USER").and()
-                .withUser("marten@@ya2do.io").password("user").authorities("USER").and()
+                .withUser("marten@@ya2do.io").password("{noop}user").authorities("USER").and()
                 .withUser("jdoe@does.net").password("unknown").disabled(true).authorities("USER");
     }
 

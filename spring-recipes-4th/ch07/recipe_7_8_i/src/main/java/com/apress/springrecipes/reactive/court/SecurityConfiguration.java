@@ -42,14 +42,14 @@ public class SecurityConfiguration {
 //    @Bean
 //    public MapUserDetailsRepository userDetailsRepository() {
 //        UserDetails rob = User.withUsername("marten").password("secret").roles("USER").build();
-//        UserDetails admin = User.withUsername("admin").password("admin").roles("USER","ADMIN").build();
+//        UserDetails admin = User.withUsername("admin").password("{noop}admin").roles("USER","ADMIN").build();
 //        return new MapUserDetailsRepository(rob, admin);
 //    }
 
     @Bean
     public MapReactiveUserDetailsService userDetailsService() {
         UserDetails rob = User.withUsername("marten").password("secret").roles("USER").build();
-        UserDetails admin = User.withUsername("admin").password("admin").roles("USER","ADMIN").build();
+        UserDetails admin = User.withUsername("admin").password("{noop}admin").roles("USER","ADMIN").build();
         return new MapReactiveUserDetailsService(rob, admin);
     }
 

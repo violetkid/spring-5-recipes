@@ -26,11 +26,11 @@
         </tr>
     </table>
 </form>
-<!-- TWITTER SIGNIN -->
+<!-- 트위터 로그인 -->
 <c:url var="twitterSigin" value="/auth/twitter"/>
 <p><a href="${twitterSigin}">Sign in with Twitter</a></p>
 
-<!-- FACEBOOK SIGNIN -->
+<!-- 페이스북 로그인 -->
 <c:url var="twitterSigin" value="/auth/facebook"/>
 <p><a href="${twitterSigin}">Sign in with Facebook</a></p>
 

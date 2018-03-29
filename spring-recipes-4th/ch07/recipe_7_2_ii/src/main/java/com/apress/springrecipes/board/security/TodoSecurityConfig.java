@@ -18,9 +18,9 @@ public class TodoSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("user").password("user").authorities("USER")
+                .withUser("user").password("{noop}user").authorities("USER")
                 .and()
-                .withUser("admin").password("admin").authorities("USER", "ADMIN");
+                .withUser("admin").password("{noop}admin").authorities("USER", "ADMIN");
     }
 
     @Override
