@@ -41,5 +41,6 @@ dependencies {
     compile "io.projectreactor.ipc:reactor-netty:0.7.3.RELEASE"
     compile "org.thymeleaf:thymeleaf-spring5:3.0.9.RELEASE"
     compile "org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.1.RELEASE"
+    compile "org.slf4j:slf4j-simple:1.7.25"
     runtime "com.h2database:h2:1.4.196"
 }

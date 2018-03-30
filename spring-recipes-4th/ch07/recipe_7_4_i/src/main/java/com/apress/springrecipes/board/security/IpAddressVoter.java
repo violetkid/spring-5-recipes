@@ -14,6 +14,7 @@ public class IpAddressVoter implements AccessDecisionVoter<Object> {
     private static final String IP_PREFIX = "IP_";
     private static final String IP_LOCAL_HOST = "IP_LOCAL_HOST";
 
+    @Override
     public boolean supports(ConfigAttribute attribute) {
         return (attribute.getAttribute() != null) && attribute.getAttribute().startsWith(IP_PREFIX);
     }
@@ -23,6 +24,7 @@ public class IpAddressVoter implements AccessDecisionVoter<Object> {
         return true;
     }
 
+    @Override
     public int vote(Authentication authentication, Object object, Collection<ConfigAttribute> configList) {
         if (!(authentication.getDetails() instanceof WebAuthenticationDetails)) {
             return ACCESS_DENIED;
