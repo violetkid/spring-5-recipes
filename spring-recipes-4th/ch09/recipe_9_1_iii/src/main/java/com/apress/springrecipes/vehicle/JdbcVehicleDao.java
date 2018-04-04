@@ -10,7 +10,6 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
 
 public class JdbcVehicleDao implements VehicleDao {
 
@@ -103,18 +102,4 @@ public class JdbcVehicleDao implements VehicleDao {
         }
     }
 
-    private class InsertVehicleStatementCreator implements PreparedStatementCreator {
-        private Vehicle vehicle;
-
-        InsertVehicleStatementCreator(Vehicle vehicle) {
-            this.vehicle = vehicle;
-        }
-
-        @Override
-        public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
-            PreparedStatement ps = conn.prepareStatement(INSERT_SQL);
-            prepareStatement(ps, this.vehicle);
-            return ps;
-        }
-    }
 }

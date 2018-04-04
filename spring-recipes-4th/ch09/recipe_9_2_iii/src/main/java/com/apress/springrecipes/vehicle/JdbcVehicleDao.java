@@ -2,7 +2,6 @@ package com.apress.springrecipes.vehicle;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
@@ -49,12 +48,6 @@ public class JdbcVehicleDao implements VehicleDao {
     public List<Vehicle> findAll() {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         return jdbcTemplate.query(SELECT_ALL_SQL, BeanPropertyRowMapper.newInstance(Vehicle.class));
-    }
-
-    private Vehicle toVehicle(ResultSet rs) throws SQLException {
-        return new Vehicle(rs.getString("VEHICLE_NO"),
-                rs.getString("COLOR"), rs.getInt("WHEEL"),
-                rs.getInt("SEAT"));
     }
 
     private void prepareStatement(PreparedStatement ps, Vehicle vehicle) throws SQLException {
