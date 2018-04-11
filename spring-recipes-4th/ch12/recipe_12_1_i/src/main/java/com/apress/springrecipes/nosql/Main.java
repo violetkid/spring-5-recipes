@@ -9,7 +9,7 @@ public class Main {
     public static final String DB_NAME = "vehicledb";
 
     public static void main(String[] args) throws Exception {
-        // Default monogclient for localhost and port 27017
+        // 기본 호스트 및 포트는 각각 localhost, 27017입니다.
         MongoClient mongo = new MongoClient();
 
         VehicleRepository repository = new MongoDBVehicleRepository(mongo, DB_NAME, "vehicles");
@@ -31,7 +31,7 @@ public class Main {
         vehicleList.forEach(System.out::println);
         System.out.println("Number of Vehicles: " + repository.count());
 
-        // Cleanup and close
+        // DB를 삭제하고 인스턴스를 닫습니다.
         mongo.dropDatabase(DB_NAME);
         mongo.close();
     }

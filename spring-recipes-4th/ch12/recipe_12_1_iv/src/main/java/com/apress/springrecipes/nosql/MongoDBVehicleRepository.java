@@ -19,7 +19,7 @@ public class MongoDBVehicleRepository implements VehicleRepository {
 
     @Override
     public long count() {
-        return mongo.count(null, Vehicle.class);
+        return mongo.count(new Query(), Vehicle.class);
     }
 
     @Override
