@@ -13,7 +13,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 ext {
-    springVersion = '5.0.4.RELEASE'
+    springVersion = '5.0.5.RELEASE'
 }
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
