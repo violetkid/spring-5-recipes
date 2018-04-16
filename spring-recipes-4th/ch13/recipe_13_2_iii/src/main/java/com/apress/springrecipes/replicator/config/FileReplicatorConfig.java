@@ -17,29 +17,29 @@ import com.apress.springrecipes.replicator.FileReplicator;
 import com.apress.springrecipes.replicator.FileReplicatorJMXImpl;
 import com.apress.springrecipes.replicator.ReplicationNotificationListener;
 
-
 @Configuration
 public class FileReplicatorConfig {
-    
+
     @Value("#{systemProperties['user.home']}/docs")
     private String srcDir;
-    @Value("#{systemProperties['user.home']}/docs_backup")    
-    private String destDir;    
+
+    @Value("#{systemProperties['user.home']}/docs_backup")
+    private String destDir;
 
     @Bean
-    public FileCopier fileCopier() { 
-	FileCopier fCop = new FileCopierJMXImpl();
-	return fCop;
+    public FileCopier fileCopier() {
+        FileCopier fCop = new FileCopierJMXImpl();
+        return fCop;
     }
 
-    @Bean           
+    @Bean
     public FileReplicator documentReplicator() {
-	FileReplicator fRep = new FileReplicatorJMXImpl();       
-	verifyDirectoriesExist();
-	fRep.setSrcDir(srcDir);
-	fRep.setDestDir(destDir);
+        FileReplicator fRep = new FileReplicatorJMXImpl();
+        verifyDirectoriesExist();
+        fRep.setSrcDir(srcDir);
+        fRep.setDestDir(destDir);
         fRep.setFileCopier(fileCopier());
-	return fRep;
+        return fRep;
     }
 
     @Bean
@@ -60,8 +60,8 @@ public class FileReplicatorConfig {
         File src = new File(srcDir);
         File dest = new File(destDir);
         if (!src.exists())
-	    src.mkdirs();
+            src.mkdirs();
         if (!dest.exists())
             dest.mkdirs();
-    }    
+    }
 }

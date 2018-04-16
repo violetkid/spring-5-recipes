@@ -9,22 +9,23 @@ import org.springframework.jmx.export.annotation.ManagedResource;
 
 @ManagedResource(description = "File replicator")
 public class FileReplicatorJMXImpl implements FileReplicator {
-        
+
     private String srcDir;
     private String destDir;
     private FileCopier fileCopier;
-    
+
     @ManagedAttribute(description = "Get source directory")
-    public String getSrcDir() { 
-	return srcDir;
+    public String getSrcDir() {
+        return srcDir;
     }
+
     @ManagedAttribute(description = "Get destination directory")
-    public String getDestDir() { 
-	return destDir;	
+    public String getDestDir() {
+        return destDir;
     }
-    
-    public FileCopier getFileCopier() { 
-	return fileCopier;
+
+    public FileCopier getFileCopier() {
+        return fileCopier;
     }
 
     @ManagedAttribute(description = "Set source directory")
@@ -38,10 +39,9 @@ public class FileReplicatorJMXImpl implements FileReplicator {
     }
 
     public void setFileCopier(FileCopier fileCopier) {
-	this.fileCopier = fileCopier;
+        this.fileCopier = fileCopier;
     }
 
- 
     @ManagedOperation(description = "Replicate files")
     public synchronized void replicate() throws IOException {
         File[] files = new File(srcDir).listFiles();

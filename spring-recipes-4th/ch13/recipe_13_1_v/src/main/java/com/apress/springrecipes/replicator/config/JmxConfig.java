@@ -39,6 +39,4 @@ public class JmxConfig {
         return assembler;
     }
 
-
 }
-

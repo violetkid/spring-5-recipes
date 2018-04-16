@@ -12,8 +12,8 @@ import org.springframework.jmx.export.notification.NotificationPublisher;
 import org.springframework.jmx.export.notification.NotificationPublisherAware;
 
 @ManagedResource(description = "File replicator")
-public class FileReplicatorJMXImpl implements FileReplicator,NotificationPublisherAware {
-        
+public class FileReplicatorJMXImpl implements FileReplicator, NotificationPublisherAware {
+
     private String srcDir;
     private String destDir;
     private FileCopier fileCopier;
@@ -21,24 +21,25 @@ public class FileReplicatorJMXImpl implements FileReplicator,NotificationPublish
     private NotificationPublisher notificationPublisher;
 
     @ManagedAttribute(description = "Get source directory")
-    public String getSrcDir() { 
-	return srcDir;
+    public String getSrcDir() {
+        return srcDir;
     }
+
     @ManagedAttribute(description = "Get destination directory")
-    public String getDestDir() { 
-	return destDir;	
-    }
-    
-    public FileCopier getFileCopier() { 
-	return fileCopier;
+    public String getDestDir() {
+        return destDir;
     }
 
-    public int getSequenceNumber() { 
-	return sequenceNumber;
+    public FileCopier getFileCopier() {
+        return fileCopier;
     }
 
-    public NotificationPublisher getNotificationPublisher() { 
-	return notificationPublisher;
+    public int getSequenceNumber() {
+        return sequenceNumber;
+    }
+
+    public NotificationPublisher getNotificationPublisher() {
+        return notificationPublisher;
     }
 
     @ManagedAttribute(description = "Set source directory")
@@ -52,21 +53,20 @@ public class FileReplicatorJMXImpl implements FileReplicator,NotificationPublish
     }
 
     public void setFileCopier(FileCopier fileCopier) {
-	this.fileCopier = fileCopier;
+        this.fileCopier = fileCopier;
     }
 
     public void setSequenceNumber(int sequenceNumber) {
-	this.sequenceNumber = sequenceNumber;
+        this.sequenceNumber = sequenceNumber;
     }
 
     public void setNotificationPublisher(NotificationPublisher notificationPublisher) {
         this.notificationPublisher = notificationPublisher;
-    } 
+    }
 
- 
     @ManagedOperation(description = "Replicate files")
     public synchronized void replicate() throws IOException {
-	notificationPublisher.sendNotification(new Notification("replication.start", this, sequenceNumber));
+        notificationPublisher.sendNotification(new Notification("replication.start", this, sequenceNumber));
 
         File[] files = new File(srcDir).listFiles();
         for (File file : files) {
@@ -74,7 +74,7 @@ public class FileReplicatorJMXImpl implements FileReplicator,NotificationPublish
                 fileCopier.copyFile(srcDir, destDir, file.getName());
             }
         }
-	notificationPublisher.sendNotification(new Notification("replication.complete", this, sequenceNumber));
+        notificationPublisher.sendNotification(new Notification("replication.complete", this, sequenceNumber));
         sequenceNumber++;
     }
 

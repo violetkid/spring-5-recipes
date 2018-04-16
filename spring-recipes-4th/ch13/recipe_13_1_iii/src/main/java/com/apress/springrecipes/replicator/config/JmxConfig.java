@@ -36,7 +36,6 @@ public class JmxConfig {
         return beansToExport;
     }
 
-
     @Bean
     public FactoryBean<Registry> rmiRegistry() {
         return new RmiRegistryFactoryBean();
@@ -50,4 +49,3 @@ public class JmxConfig {
         return connectorServerFactoryBean;
     }
 }
-

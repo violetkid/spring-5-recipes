@@ -13,7 +13,6 @@ import com.apress.springrecipes.replicator.FileCopierJMXImpl;
 import com.apress.springrecipes.replicator.FileReplicator;
 import com.apress.springrecipes.replicator.FileReplicatorJMXImpl;
 
-
 @Configuration
 public class FileReplicatorConfig {
 

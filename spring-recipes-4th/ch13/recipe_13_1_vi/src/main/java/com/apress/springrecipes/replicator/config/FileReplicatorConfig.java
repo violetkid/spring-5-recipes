@@ -13,12 +13,12 @@ import com.apress.springrecipes.replicator.FileCopierJMXImpl;
 import com.apress.springrecipes.replicator.FileReplicator;
 import com.apress.springrecipes.replicator.FileReplicatorJMXImpl;
 
-
 @Configuration
 public class FileReplicatorConfig {
 
     @Value("#{systemProperties['user.home']}/docs")
     private String srcDir;
+
     @Value("#{systemProperties['user.home']}/docs_backup")
     private String destDir;
 

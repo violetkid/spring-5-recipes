@@ -33,7 +33,6 @@ public class JmxConfig {
         return beansToExport;
     }
 
-
     @Bean
     public MBeanInfoAssembler assembler() {
         MetadataMBeanInfoAssembler assembler = new MetadataMBeanInfoAssembler();
@@ -41,7 +40,4 @@ public class JmxConfig {
         return assembler;
     }
 
-
-
 }
-

@@ -18,12 +18,12 @@ import com.apress.springrecipes.replicator.FileReplicator;
 import com.apress.springrecipes.replicator.FileReplicatorJMXImpl;
 import com.apress.springrecipes.replicator.ReplicationNotificationListener;
 
-
 @Configuration
 public class FileReplicatorConfig {
 
     @Value("#{systemProperties['user.home']}/docs")
     private String srcDir;
+
     @Value("#{systemProperties['user.home']}/docs_backup")
     private String destDir;
 

@@ -12,12 +12,12 @@ import com.apress.springrecipes.replicator.FileCopier;
 import com.apress.springrecipes.replicator.FileCopierJMXImpl;
 import com.apress.springrecipes.replicator.FileReplicatorJMXImpl;
 
-
 @Configuration
 public class FileReplicatorConfig {
 
     @Value("#{systemProperties['user.home']}/docs")
     private String srcDir;
+
     @Value("#{systemProperties['user.home']}/docs_backup")
     private String destDir;
 
@@ -26,7 +26,6 @@ public class FileReplicatorConfig {
         FileCopier fCop = new FileCopierJMXImpl();
         return fCop;
     }
-
 
     @Bean
     public FileReplicatorJMXImpl documentReplicator() {

@@ -15,7 +15,8 @@ public class JmxClientConfiguration {
     @Bean
     public FactoryBean<MBeanServerConnection> mbeanServerConnection() throws MalformedURLException {
         MBeanServerConnectionFactoryBean mBeanServerConnectionFactoryBean = new MBeanServerConnectionFactoryBean();
-        mBeanServerConnectionFactoryBean.setServiceUrl("service:jmx:rmi://localhost/jndi/rmi://localhost:1099/replicator");
+        mBeanServerConnectionFactoryBean
+                .setServiceUrl("service:jmx:rmi://localhost/jndi/rmi://localhost:1099/replicator");
         return mBeanServerConnectionFactoryBean;
     }
 }

@@ -9,6 +9,5 @@ public class Main {
     public static void main(String[] args) throws IOException {
         new AnnotationConfigApplicationContext("com.apress.springrecipes.replicator.config");
         System.in.read();
-
     }
 }

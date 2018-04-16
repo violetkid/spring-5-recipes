@@ -35,10 +35,8 @@ public class JmxConfig {
     @Bean
     public MBeanInfoAssembler assembler() {
         MethodNameBasedMBeanInfoAssembler assembler = new MethodNameBasedMBeanInfoAssembler();
-        assembler.setManagedMethods("getSrcDir","setSrcDir","getDestDir","setDestDir","replicate");
+        assembler.setManagedMethods("getSrcDir", "setSrcDir", "getDestDir", "setDestDir", "replicate");
         return assembler;
     }
 
-
 }
-

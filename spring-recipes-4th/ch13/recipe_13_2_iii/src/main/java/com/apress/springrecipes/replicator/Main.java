@@ -8,9 +8,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.apress.springrecipes.replicator.config");
+        ApplicationContext context = new AnnotationConfigApplicationContext(
+                "com.apress.springrecipes.replicator.config");
         System.in.read();
-
     }
 }
