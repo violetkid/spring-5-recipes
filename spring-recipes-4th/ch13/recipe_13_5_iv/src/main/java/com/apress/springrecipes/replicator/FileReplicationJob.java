@@ -14,8 +14,7 @@ public class FileReplicationJob extends QuartzJobBean {
         this.fileReplicator = fileReplicator;
     }
 
-    protected void executeInternal(JobExecutionContext context)
-            throws JobExecutionException {
+    protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
         try {
             fileReplicator.replicate();
         } catch (IOException e) {

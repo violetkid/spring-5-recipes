@@ -37,6 +37,8 @@ dependencies {
     compile "org.springframework.integration:spring-integration-file:5.0.1.RELEASE"
     compile "org.springframework.batch:spring-batch-core:4.0.0.RELEASE"
     compile "org.springframework.batch:spring-batch-integration:4.0.0.RELEASE"
-    compile "javax.jms:javax.jms-api:2.0.1"
     compile "org.apache.activemq:activemq-client:5.15.3"
+    compile "org.slf4j:slf4j-simple:1.7.25"
+    compile "javax.jms:javax.jms-api:2.0.1"
+
 }

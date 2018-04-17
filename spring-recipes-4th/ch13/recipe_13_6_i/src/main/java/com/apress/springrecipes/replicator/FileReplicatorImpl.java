@@ -6,21 +6,21 @@ import java.io.IOException;
 import org.springframework.scheduling.annotation.Scheduled;
 
 public class FileReplicatorImpl implements FileReplicator {
-        
+
     private String srcDir;
     private String destDir;
     private FileCopier fileCopier;
-    
-    public String getSrcDir() { 
-	return srcDir;
+
+    public String getSrcDir() {
+        return srcDir;
     }
 
-    public String getDestDir() { 
-	return destDir;	
+    public String getDestDir() {
+        return destDir;
     }
-    
-    public FileCopier getFileCopier() { 
-	return fileCopier;
+
+    public FileCopier getFileCopier() {
+        return fileCopier;
     }
 
     public void setSrcDir(String srcDir) {
@@ -32,7 +32,7 @@ public class FileReplicatorImpl implements FileReplicator {
     }
 
     public void setFileCopier(FileCopier fileCopier) {
-	this.fileCopier = fileCopier;
+        this.fileCopier = fileCopier;
     }
 
     @Scheduled(fixedDelay = 60 * 1000)

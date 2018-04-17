@@ -33,6 +33,7 @@ dependencies {
     compile "org.springframework:spring-beans:${springVersion}"
     compile "org.springframework:spring-jms:${springVersion}"
     compile "javax.jms:javax.jms-api:2.0.1"
+    compile "org.slf4j:slf4j-simple:1.7.25"
     compile "org.apache.activemq:activemq-client:5.15.3"
     compile "org.apache.activemq:activemq-jms-pool:5.15.3"
 }

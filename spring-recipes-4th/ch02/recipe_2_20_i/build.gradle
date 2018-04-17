@@ -33,4 +33,5 @@ dependencies {
     compile "org.springframework:spring-beans:${springVersion}"
     compile "org.aspectj:aspectjrt:1.8.13"
     compile "org.aspectj:aspectjweaver:1.8.13"
+    compile "org.slf4j:slf4j-simple:1.7.25"
 }

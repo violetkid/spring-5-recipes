@@ -34,4 +34,5 @@ dependencies {
     compile "org.springframework:spring-jdbc:${springVersion}"
     compile "org.springframework.data:spring-data-mongodb:2.0.3.RELEASE"
     compile "org.apache.commons:commons-lang3:3.7"
+    compile "org.slf4j:slf4j-simple:1.7.25"
 }

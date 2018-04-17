@@ -30,4 +30,5 @@ dependencies {
     compile "org.apache.poi:poi:3.17"
     compile "com.itextpdf:itextpdf:5.5.12"
     compile "com.lowagie:itext:2.1.7"
+    compile "org.slf4j:slf4j-simple:1.7.25"
 }

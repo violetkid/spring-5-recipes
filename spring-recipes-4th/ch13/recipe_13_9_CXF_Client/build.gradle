@@ -33,4 +33,5 @@ dependencies {
     compile "org.springframework:spring-beans:${springVersion}"
     compile "org.springframework:spring-context-support:${springVersion}"
     compile "org.apache.cxf:cxf-rt-frontend-jaxws:3.2.2"
+    compile "org.slf4j:slf4j-simple:1.7.25"
 }

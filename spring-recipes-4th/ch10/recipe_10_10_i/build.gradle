@@ -35,4 +35,5 @@ dependencies {
     compile "org.springframework:spring-aspects:${springVersion}"
     compile "org.postgresql:postgresql:42.1.4"
     runtime "org.springframework:spring-instrument:${springVersion}"
+    compile "org.slf4j:slf4j-simple:1.7.25"
 }

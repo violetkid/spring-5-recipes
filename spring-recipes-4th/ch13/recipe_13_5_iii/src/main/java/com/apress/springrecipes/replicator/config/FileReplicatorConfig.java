@@ -11,37 +11,37 @@ import com.apress.springrecipes.replicator.FileCopierImpl;
 import com.apress.springrecipes.replicator.FileReplicator;
 import com.apress.springrecipes.replicator.FileReplicatorImpl;
 
-
 @Configuration
 public class FileReplicatorConfig {
-    
+
     @Value("#{systemProperties['user.home']}/docs")
     private String srcDir;
-    @Value("#{systemProperties['user.home']}/docs_backup")    
-    private String destDir;    
+
+    @Value("#{systemProperties['user.home']}/docs_backup")
+    private String destDir;
 
     @Bean
-    public FileCopier fileCopier() { 
-	FileCopier fCop = new FileCopierImpl();
-	return fCop;
+    public FileCopier fileCopier() {
+        FileCopier fCop = new FileCopierImpl();
+        return fCop;
     }
 
-    @Bean           
+    @Bean
     public FileReplicator documentReplicator() {
-	FileReplicator fRep = new FileReplicatorImpl();       
-	verifyDirectoriesExist();
-	fRep.setSrcDir(srcDir);
-	fRep.setDestDir(destDir);
+        FileReplicator fRep = new FileReplicatorImpl();
+        verifyDirectoriesExist();
+        fRep.setSrcDir(srcDir);
+        fRep.setDestDir(destDir);
         fRep.setFileCopier(fileCopier());
-	return fRep;
+        return fRep;
     }
 
     private void verifyDirectoriesExist() {
         File src = new File(srcDir);
         File dest = new File(destDir);
         if (!src.exists())
-	    src.mkdirs();
+            src.mkdirs();
         if (!dest.exists())
             dest.mkdirs();
-    }    
+    }
 }

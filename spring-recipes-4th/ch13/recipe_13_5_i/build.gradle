@@ -32,5 +32,6 @@ dependencies {
     compile "org.springframework:spring-context:${springVersion}"
     compile "org.springframework:spring-beans:${springVersion}"
     compile "org.springframework:spring-context-support:${springVersion}"
+    compile "org.slf4j:slf4j-simple:1.7.25"
     compile "org.quartz-scheduler:quartz:2.3.0"
 }

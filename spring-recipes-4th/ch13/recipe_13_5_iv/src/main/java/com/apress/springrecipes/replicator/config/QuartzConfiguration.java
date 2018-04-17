@@ -33,7 +33,7 @@ public class QuartzConfiguration {
         CronTriggerFactoryBean documentReplicationTrigger = new CronTriggerFactoryBean();
         documentReplicationTrigger.setJobDetail(documentReplicationJob);
         documentReplicationTrigger.setStartDelay(5000);
-        documentReplicationTrigger.setCronExpression("0/60 * * * * ?");
+        documentReplicationTrigger.setCronExpression("0/59 * * * * ?");
         return documentReplicationTrigger;
     }
 

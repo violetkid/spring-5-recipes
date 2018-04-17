@@ -35,4 +35,5 @@ dependencies {
     compile "org.springframework:spring-jdbc:${springVersion}"
     compile "org.springframework.cloud:spring-cloud-spring-service-connector:2.0.1.RELEASE"
     compile "javax.servlet:javax.servlet-api:4.0.0"
+    compile "org.slf4j:slf4j-simple:1.7.25"
 }

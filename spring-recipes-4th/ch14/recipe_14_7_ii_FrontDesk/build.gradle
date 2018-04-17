@@ -34,5 +34,6 @@ dependencies {
     compile "org.springframework:spring-jms:${springVersion}"
     compile "org.springframework.kafka:spring-kafka:2.1.2.RELEASE"
     compile "org.apache.kafka:kafka-clients:1.0.0"
+    compile "org.slf4j:slf4j-simple:1.7.25"
 
 }

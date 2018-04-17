@@ -4,21 +4,21 @@ import java.io.File;
 import java.io.IOException;
 
 public class FileReplicatorImpl implements FileReplicator {
-        
+
     private String srcDir;
     private String destDir;
     private FileCopier fileCopier;
-    
-    public String getSrcDir() { 
-	return srcDir;
+
+    public String getSrcDir() {
+        return srcDir;
     }
 
-    public String getDestDir() { 
-	return destDir;	
+    public String getDestDir() {
+        return destDir;
     }
-    
-    public FileCopier getFileCopier() { 
-	return fileCopier;
+
+    public FileCopier getFileCopier() {
+        return fileCopier;
     }
 
     public void setSrcDir(String srcDir) {
@@ -30,7 +30,7 @@ public class FileReplicatorImpl implements FileReplicator {
     }
 
     public void setFileCopier(FileCopier fileCopier) {
-	this.fileCopier = fileCopier;
+        this.fileCopier = fileCopier;
     }
 
     public synchronized void replicate() throws IOException {

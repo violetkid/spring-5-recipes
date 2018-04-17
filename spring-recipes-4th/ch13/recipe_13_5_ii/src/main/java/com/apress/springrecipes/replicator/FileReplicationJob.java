@@ -9,11 +9,9 @@ import org.quartz.JobExecutionException;
 
 public class FileReplicationJob implements Job {
 
-    public void execute(JobExecutionContext context)
-            throws JobExecutionException {
+    public void execute(JobExecutionContext context) throws JobExecutionException {
         Map<String, Object> dataMap = context.getJobDetail().getJobDataMap();
-        FileReplicator fileReplicator =
-            (FileReplicator) dataMap.get("fileReplicator");
+        FileReplicator fileReplicator = (FileReplicator) dataMap.get("fileReplicator");
         try {
             fileReplicator.replicate();
         } catch (IOException e) {
